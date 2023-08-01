@@ -1,5 +1,7 @@
 extends ScrollContainer
 
+class_name UserList
+
 var Card = load("res://scenes/users/components/userList/Card.tscn")
 export var list = []
 
