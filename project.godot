@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Card",
 "language": "GDScript",
 "path": "res://scenes/users/components/userList/card.gd"
+}, {
+"base": "",
+"class": "GitAPI",
+"language": "NativeScript",
+"path": "res://addons/godot-git-plugin/git_api.gdns"
 } ]
 _global_script_class_icons={
-"Card": ""
+"Card": "",
+"GitAPI": ""
 }
 
 [application]
@@ -27,6 +33,11 @@ config/icon="res://icon.png"
 [autoload]
 
 DB="*res://Scripts/Global/DB.gd"
+
+[editor]
+
+version_control_autoload_on_startup=true
+version_control_plugin_name="GitAPI"
 
 [gui]
 
