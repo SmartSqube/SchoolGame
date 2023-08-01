@@ -12,3 +12,5 @@ margin_bottom = -40.0
 script = ExtResource( 1 )
 
 [node name="Grid" type="GridContainer" parent="."]
+
+[connection signal="onClickCard" from="." to="." method="_on_ScrollContainer_onClickCard"]

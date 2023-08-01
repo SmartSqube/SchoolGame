@@ -11,3 +11,6 @@ script = ExtResource( 2 )
 [node name="UserList" parent="." instance=ExtResource( 1 )]
 margin_right = 28.0
 margin_bottom = 28.0
+
+[connection signal="onClickCard" from="UserList" to="." method="_on_UserList_onClickCard"]
+[connection signal="onCreateCard" from="UserList" to="." method="_on_UserList_onCreateCard"]

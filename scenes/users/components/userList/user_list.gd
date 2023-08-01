@@ -5,6 +5,10 @@ class_name UserList
 var Card = load("res://scenes/users/components/userList/Card.tscn")
 export var list = []
 
+signal onClickCard
+signal onCreateCard
+
+
 func _ready():
 	pass 
 	
@@ -12,6 +16,7 @@ func _process(delta):
 	var cardCount = list.size() + 1;
 	while  cardCount > $Grid.get_child_count():
 		var card = Card.instance()
+		card.connect("pressed", self, "_onClickCard")
 		$Grid.add_child(card)
 		
 	while cardCount < $Grid.get_child_count():
@@ -30,4 +35,9 @@ func _process(delta):
 		card.label = "+"
 	
 	
-	
+func _onClickCard(value):
+	if value == "+":
+		emit_signal("onCreateCard")
+	else:
+		emit_signal("onClickCard",value)
+

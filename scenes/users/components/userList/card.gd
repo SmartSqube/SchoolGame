@@ -1,18 +1,24 @@
 extends Control
 
 class_name Card
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
 export var label:String = "" 
 export var icon:String = "" 
+ 
+signal pressed
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	pass # Replace with function body.
+	pass 
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$Label.text = label+ "%s" % get_index()
+
+
+
+
+
+func _on_Button_pressed():
+	emit_signal("pressed", label)
+	pass # Replace with function body.
