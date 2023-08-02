@@ -10,14 +10,15 @@ func getCount():
 func setCount(c):
 	context.count = c
 	
-func getUser():
-	if "userName" in context:
-		return context.count
+func getUserList():
+	if "userList" in context:
+		return context.userList
 	return 0
 	
-func setUser(c):
-	context.count = c
-	
+func addUser(user):
+	if not "userList" in context:
+		context.userList = []
+	context.userList.push_back(user)
 
 
 
