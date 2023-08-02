@@ -13,7 +13,7 @@ func _ready():
 	pass 
 	
 func _process(delta):	
-	var cardCount = list.size() + 1;
+	var cardCount = list.size() + 1
 	while  cardCount > $Grid.get_child_count():
 		var card = Card.instance()
 		card.connect("pressed", self, "_onClickCard")

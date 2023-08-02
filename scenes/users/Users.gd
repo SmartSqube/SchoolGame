@@ -15,7 +15,5 @@ func _on_UserList_onClickCard(value):
 
 
 func _on_UserList_onCreateCard():
-	DB.addUser({
-		"name":"Добавлино", "icon":"res://icon.png"
-	})
-	DB.saveGame()
+	get_tree().change_scene("res://scenes/users/components/Avatar/components/createUser.tscn")
+	

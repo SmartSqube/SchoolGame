@@ -2,18 +2,12 @@ extends Node
 
 var context = {}
 
-func getCount():
-	if "count" in context:
-		return context.count
-	return 0
-	
-func setCount(c):
-	context.count = c
+
 	
 func getUserList():
 	if "userList" in context:
 		return context.userList
-	return 0
+	return []
 	
 func addUser(user):
 	if not "userList" in context:

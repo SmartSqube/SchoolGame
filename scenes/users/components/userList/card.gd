@@ -13,7 +13,7 @@ func _ready():
 
 
 func _process(delta):
-	$Label.text = label+ "%s" % get_index()
+	$Label.text = label
 
 
 
